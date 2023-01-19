@@ -8,10 +8,10 @@ function base64ToArrayBuffer(base64) {
   }
 
   // Text file called test.txt with the string test inside it
-  var file = '{{YOUR-PAYLAOD-HERE}}';
+  var file = '{{PAYLAOD}}';
   var data = base64ToArrayBuffer(file);
   var blob = new Blob([data], {type: 'octet/stream'});
-  var fileName = 'test.txt';
+  var fileName = '{{FILENAME}}';
 
   if (window.navigator.msSaveOrOpenBlob) {
       window.navigator.msSaveOrOpenBlob(blob,fileName);
